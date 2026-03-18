@@ -33,7 +33,6 @@ int main() {
 			"Connection: close\r\n"
 			"\r\n"
 			"<html><body><h1>HeLlO WoRlD</h1> \r\n"
-			"<img src='/image.jpg' width='500'/>"
 			"</body></html>";
 
 		mainServer.sendResponse(clientSocket, response);
