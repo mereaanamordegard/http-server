@@ -6,7 +6,7 @@ int main() {
 
 	WinSock_Initialize winSockBoot;
 	socket_creator SocketManager(winSockBoot);
-	TCPServer mainServer("127.0.0.1", 8080, winSockBoot);
+	TCPServer mainServer("127.0.0.1", 8080, SocketManager);
 	
 	
 	mainServer.bindServer();
@@ -39,6 +39,5 @@ int main() {
 
 		closesocket(clientSocket);
 	} 
-	WSACleanup();
 	return 0;
 }

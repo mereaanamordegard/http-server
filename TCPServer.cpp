@@ -6,10 +6,6 @@ bool TCPServer::listening(int maxConnections) {
 }
 
 bool TCPServer::bindServer() {
-    if (!bootstrap.isInitialized()) {
-        std::cerr << "Winsock is not initialized. Call initialize() first." << std::endl;
-        return false;
-    }
     if (serverSocket == INVALID_SOCKET) {
         std::cerr << "Socket invalid." << std::endl;
         return false;
